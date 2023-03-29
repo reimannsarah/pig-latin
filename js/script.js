@@ -6,7 +6,9 @@ function pigLatin(word) {
         if (vowels[i] === wordArray[0]) {
             return pLatin = (wordArray.join("") + "way");
         } else if (vowels[i] !== wordArray[0]){
-            return pLatin = wordArray[0];
+            const firstLetter = wordArray.shift();
+            wordArray.push(firstLetter);
+            return pLatin = wordArray.join("");
         }
     }
     // vowels.forEach(function(vowel) {
@@ -18,7 +20,8 @@ function pigLatin(word) {
     //        return pLatin;
     //     }
     // })
-    console.log("word array" + wordArray)
-    console.log("platin " + pLatin)
-    return pLatin;
+    // console.log("word array" + wordArray)
+    // console.log("platin " + pLatin)
+    // console.log(pLatin);
+    // return pLatin;
 }
