@@ -20,3 +20,7 @@ Test: "It will append "ay" to the end of the consonant-starting word"
 Code: pigLatin("code");
 Expected Output: "odecay";
 
+Test: "It will take a word that starts with qu and move the qu to the end plus ay"
+Code: pigLatin("quick");
+Expected Output: "ickquay";
+

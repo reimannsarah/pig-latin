@@ -5,23 +5,14 @@ function pigLatin(word) {
     for (let i = 0; i < vowels.length; i++) {
         if (vowels[i] === wordArray[0]) {
             return pLatin = (wordArray.join("") + "way");
-        } else if (vowels[i] !== wordArray[0]){
+        } else if ((vowels[i] !== wordArray[0]) && (wordArray[0] !== "q")) {
             const firstLetter = wordArray.shift();
             wordArray.push(firstLetter);
-            return pLatin = wordArray.join("");
+            return pLatin = wordArray.join("") + "ay";
+        } else {
+            const qu = wordArray.splice(0, 2);
+            wordArray.push(qu.join(""));
+            return pLatin = wordArray.join("") + "ay";
         }
     }
-    // vowels.forEach(function(vowel) {
-    //     if (vowel === wordArray[0]) {
-    //        pLatin.concat(wordArray.join() + "way");
-    //        return pLatin;
-    //     } else if (vowel !== wordArray[0]) {
-    //        pLatin.concat(wordArray.shift());
-    //        return pLatin;
-    //     }
-    // })
-    // console.log("word array" + wordArray)
-    // console.log("platin " + pLatin)
-    // console.log(pLatin);
-    // return pLatin;
 }
