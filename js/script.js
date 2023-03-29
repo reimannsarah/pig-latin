@@ -16,3 +16,18 @@ function pigLatin(word) {
         }
     }
 }
+
+function userInput(e){
+    e.preventDefault();
+    const word = document.querySelector("#word").value;
+    const output = document.querySelector("#output");
+    const result = pigLatin(word);
+    const p = document.createElement("p");
+
+    p.append(result);
+    output.append(p);
+}
+
+window.addEventListener("load", function(){
+    document.addEventListener("submit", userInput);
+})
